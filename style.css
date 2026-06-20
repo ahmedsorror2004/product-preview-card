@@ -1,0 +1,157 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+:root{
+    --font-montserrat:"Montserrat", sans-serif;
+    --font-franuces:"Fraunces", serif;
+
+    --c-green-500:hsl(158, 36%, 37%);
+    --c-green-700:hsl(158, 42%, 18%);
+    --c-black:hsl(212, 21%, 14%);
+    --c-grey:hsl(228, 12%, 48%);
+    --c-cream:hsl(30, 38%, 92%);
+    --c-white:hsl(0, 0%, 100%);
+}
+
+body{
+    min-height:100vh;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    background:var(--c-cream);
+    padding:16px;
+    font-family:var(--font-montserrat);
+}
+
+.card{
+    width:600px;
+    display:flex;
+}
+
+.card-image,
+.card-content{
+    width:50%;
+}
+
+.card-image picture,
+.card-image img{
+    width:100%;
+    height:100%;
+    display:block;
+}
+
+.card-image img{
+    object-fit:cover;
+    border-top-left-radius:12px;
+    border-bottom-left-radius:12px;
+}
+
+.card-content{
+    background:var(--c-white);
+    padding:32px;
+
+    border-top-right-radius:12px;
+    border-bottom-right-radius:12px;
+}
+
+.category{
+    font-size:12px;
+    font-weight:500;
+    letter-spacing:5px;
+    color:var(--c-grey);
+    margin-bottom:22px;
+}
+
+h1{
+    font-family:var(--font-franuces);
+    font-size:34px;
+    line-height:1;
+    color:var(--c-black);
+    margin-bottom:24px;
+}
+
+.description{
+    font-size:14px;
+    font-weight:500;
+    line-height:1.65;
+    color:var(--c-grey);
+    margin-bottom:28px;
+}
+
+.price-box{
+    display:flex;
+    align-items:center;
+    gap:18px;
+    margin-bottom:28px;
+}
+
+.new-price{
+    font-family:var(--font-franuces);
+    font-size:32px;
+    color:var(--c-green-500);
+}
+
+.old-price{
+    font-size:13px;
+    color:var(--c-grey);
+    text-decoration:line-through;
+}
+
+.cart-btn{
+    width:100%;
+    border:none;
+    border-radius:8px;
+    padding:15px;
+    background:var(--c-green-500);
+    color:var(--c-white);
+
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    gap:10px;
+
+    font-size:14px;
+    font-weight:700;
+    cursor:pointer;
+}
+
+.cart-btn:hover{
+    background:var(--c-green-700);
+}
+
+.cart-btn i{
+    font-size:14px;
+}
+
+@media (max-width:640px){
+
+    .card{
+        width:343px;
+        flex-direction:column;
+    }
+
+    .card-image,
+    .card-content{
+        width:100%;
+    }
+
+    .card-image{
+        height:240px;
+    }
+
+    .card-image img{
+        border-radius:12px 12px 0 0;
+    }
+
+    .card-content{
+        border-radius:0 0 12px 12px;
+        padding:24px;
+    }
+
+    h1{
+        font-size:32px;
+    }
+}
